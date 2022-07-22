@@ -1,0 +1,148 @@
+*,
+body {
+  text-align: center;
+  font-family: "Courier";
+  font-weight: bold;
+}
+
+body {
+  background-color: #6b6b6b;
+  overflow: hidden;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.game-stats {
+  padding: 3%;
+}
+
+.game-stats .score {
+  color: #fff;
+}
+
+.game-stats .delimitation {
+  width: 5em;
+  height: 0.5em;
+  background: #ff4949;
+  margin: 0 auto;
+}
+
+.game-board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50vh;
+  border: 2px solid black;
+  box-shadow: 0 0 15px grey;
+  overflow: hidden;
+}
+
+.game-board .player {
+  width: 10%;
+  height: 25px;
+  background: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #fff;
+  z-index: 999;
+}
+
+.game-board .ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+
+.functional-container {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  padding: 3%;
+}
+
+.functional-container .bg-changer {
+  background: none;
+  padding: 1em;
+  border: 1px solid blue;
+  border-radius: 3px;
+  font-size: 1.3em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in, color 0.3s ease-in-out;
+  text-transform: capitalize;
+  line-height: 1.5;
+  color: #99c4c8;
+}
+
+.functional-container .bg-changer:hover {
+  background: #6a67ce;
+  color: #fff;
+}
+
+.lose-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6em;
+  color: #ee5007;
+}
+
+.movement-buttons {
+  padding: 10%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: none;
+}
+
+.movement-buttons i {
+  font-size: 3em;
+}
+
+.movement-buttons .fa-arrow-left {
+  position: absolute;
+  left: 1%;
+}
+
+.movement-buttons .fa-arrow-right {
+  position: absolute;
+  right: 1%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .game-board {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .game-board {
+    width: 75%;
+  }
+
+  .functional-container .bg-changer {
+    width: 13em;
+    padding: 1em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: visible;
+  }
+
+  .game-board .ball {
+    width: 25px;
+    height: 25px;
+  }
+}
